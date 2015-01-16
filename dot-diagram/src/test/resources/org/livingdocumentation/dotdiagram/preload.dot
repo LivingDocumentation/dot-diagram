@@ -1,0 +1,14 @@
+# Class diagram preload test
+digraph G {
+	graph [labelloc=top,label="preload test",fontname="Verdana",fontsize=12];
+	edge [fontname="Verdana",fontsize=9,labelfontname="Verdana",labelfontsize=9];
+	node [fontname="Verdana",fontsize=9,shape=record];
+//This is BMW
+	c0 [label="My Car", color=grey,fontcolor=grey,fontname="Verdana",fontsize=9]
+//The wheels of my car
+	c1 [label="Its wheels"]
+	// This association should be ignored
+	c0 -> c2 [label="-"  , arrowhead=open];
+	// There are 4 wheels
+	c0 -> c1 [label="4*"  , arrowhead=open];
+}

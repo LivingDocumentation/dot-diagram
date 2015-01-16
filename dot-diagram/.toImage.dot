@@ -1,0 +1,19 @@
+# Class diagram clustering test
+digraph G {
+	graph [labelloc=top,label="clustering test",fontname="Verdana",fontsize=12];
+	edge [fontname="Verdana",fontsize=9,labelfontname="Verdana",labelfontsize=9];
+	node [fontname="Verdana",fontsize=9,shape=record];
+subgraph cluster_c0 {
+label = "BMW brand";
+//This is BMW
+	c1 [label="My Car", color=grey,fontcolor=grey,fontname="Verdana",fontsize=9]
+//The wheels of my car
+	c2 [label="Its wheels"]
+	// There are 4 wheels
+	c1 -> c2 [label="4*"  , arrowhead=open];
+}
+//He loves BMW
+	c3 [label="My Customer", arrowhead=none,style=dashed]
+	// The buyer of the car
+	c3 -> c1 [label="buys"  , arrowhead=open,style=dashed];
+}
