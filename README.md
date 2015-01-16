@@ -8,12 +8,11 @@ This project provides a convenient API (DotGraph) to create graphs, including su
 For example:
 
 ~~~~~~~~
-    final DotGraph graph = new DotGraph("simple test");
-		final Digraph digraph = graph.getDigraph();
-		digraph.addNode("Car").setLabel("My Car").setComment("This is BMW").setOptions(STUB_NODE_OPTIONS);
-		digraph.addNode("Wheel").setLabel("Its wheels").setComment("The wheels of my car");
-		digraph.addAssociation("Car", "Wheel").setLabel("4*").setComment("There are 4 wheels")
-				.setOptions(ASSOCIATION_EDGE_STYLE);
+final DotGraph graph = new DotGraph("simple test");
+final Digraph digraph = graph.getDigraph();
+digraph.addNode("Car").setLabel("My Car").setComment("This is BMW").setOptions(STUB_NODE_OPTIONS);
+digraph.addNode("Wheel").setLabel("Its wheels").setComment("The wheels of my car");
+digraph.addAssociation("Car", "Wheel").setLabel("4*").setComment("There are 4 wheels").setOptions(ASSOCIATION_EDGE_STYLE);
 ~~~~~~~~
 
 Would generate the dot syntax:
