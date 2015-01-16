@@ -37,9 +37,11 @@ digraph G {
 This project also offers for convenience a DotWriter that launches Graphviz to render the dot file into an image file. This requires Graphviz to be installed on the machine, along with read/write access to the disk for temporary .dot files.
 
 For example, calling dot on the simple graph above would generate this image:
+
 ![Rendered to .png](dot-diagram/doc/simple.png)
 
 And the clustering example would generate this image:
+
 ![Rendered to .png](dot-diagram/doc/clustering.png)
 
 Please look at the tests for more examples.
