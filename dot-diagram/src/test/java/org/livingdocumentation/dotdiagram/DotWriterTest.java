@@ -18,7 +18,7 @@ public class DotWriterTest {
 		p.load(this.getClass().getResourceAsStream("graphviz-dot.properties"));
 
 		DotWriter renderer = new DotWriter(p);
-		final String content = DotGraphTest.readTestResource("clustering.dot").trim();
+		final String content = DotGraphTest.readTestResource("simple.dot").trim();
 		// System.out.println(content);
 		final String image = renderer.toImage("toImage", content);
 		assertEquals("toImage.png", image);
