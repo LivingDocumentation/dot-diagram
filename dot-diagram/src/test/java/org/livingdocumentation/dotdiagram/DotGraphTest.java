@@ -71,6 +71,10 @@ public class DotGraphTest {
 
 		// this association must be ignored
 		digraph.addExistingAssociation("Car", "Boat");
+		// this association must be ignored too
+		digraph.addExistingAssociation("Plane", "Car");
+		// this association must be ignored too
+		digraph.addExistingAssociation("Plane", "Boat");
 
 		// this association should be ignored but will be there
 		digraph.addAssociation("Car", "Plane").setLabel("-").setComment("This association should be ignored")

@@ -39,7 +39,7 @@ public class DotRenderer {
 		return OPEN_STEREOTYPE + str + CLOSE_STEREOTYPE;
 	}
 
-	public static String openGraph(String title) {
+	public static String openGraph(String title, String dir) {
 		final StringBuffer sb = new StringBuffer();
 		sb.append("# Class diagram ");
 		sb.append(title);
@@ -47,7 +47,7 @@ public class DotRenderer {
 		sb.append("digraph G {");
 
 		if (title != null) {
-			sb.append(graphTitle(title));
+			sb.append(graphTitle(title, dir));
 		}
 		sb.append(optionsEdge());
 		sb.append(optionsNode());
@@ -75,7 +75,7 @@ public class DotRenderer {
 		return NEWLINE + "//" + s;
 	}
 
-	public static String graphTitle(String title) {
+	public static String graphTitle(String title, String dir) {
 		final StringBuffer sb = new StringBuffer();
 		sb.append(NEWLINE);
 		sb.append(TAB);
@@ -87,6 +87,10 @@ public class DotRenderer {
 		sb.append("\"");
 		sb.append(",");
 		sb.append(options("Verdana", 12));
+		if (dir != null) {
+			sb.append(",");
+			sb.append("rankdir=" + dir);
+		}
 		sb.append("]");
 		sb.append(";");
 		return sb.toString();

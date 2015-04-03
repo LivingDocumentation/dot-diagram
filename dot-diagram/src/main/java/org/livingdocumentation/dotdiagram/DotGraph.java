@@ -35,6 +35,10 @@ public final class DotGraph implements Renderable {
 		this.root = new Digraph(registry, title);
 	}
 
+	public DotGraph(final String title, String direction) {
+		this.root = new Digraph(registry, title, direction);
+	}
+
 	public Digraph getDigraph() {
 		return (Digraph) root;
 	}
@@ -158,6 +162,27 @@ public final class DotGraph implements Renderable {
 			if (uid != null && uid2 != null) {
 				final Association association = new Association(uid, uid2);
 				associations.add(association);
+				return association;
+			}
+			return null;
+		}
+
+		public Association addExistingAssociation(Object sourceId, Object targetId, String label, String comment,
+				String options) {
+			final String uid = registry.existingUniqueId(sourceId);
+			final String uid2 = registry.existingUniqueId(targetId);
+			if (uid != null && uid2 != null) {
+				final Association association = new Association(uid, uid2);
+				associations.add(association);
+				if (label != null) {
+					association.setLabel(label);
+				}
+				if (comment != null) {
+					association.setComment(comment);
+				}
+				if (options != null) {
+					association.setOptions(options);
+				}
 				return association;
 			}
 			return null;
@@ -299,14 +324,21 @@ public final class DotGraph implements Renderable {
 	 */
 	public static final class Digraph extends AbstractNode {
 
+		private final String dir;
+
 		public Digraph(NodeRegistry registry, String title) {
+			this(registry, title, null);
+		}
+
+		public Digraph(NodeRegistry registry, String title, String dir) {
 			super(registry, title);
+			this.dir = dir;
 			setLabel(title);
 		}
 
 		public String render() {
 			final StringBuffer out = new StringBuffer();
-			out.append(DotRenderer.openGraph(label));
+			out.append(DotRenderer.openGraph(label, dir));
 
 			renderNodes(out);
 			renderAssociations(out);

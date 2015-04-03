@@ -17,10 +17,10 @@ public class DotWriterTest {
 		final Properties p = new Properties();
 		p.load(this.getClass().getResourceAsStream("graphviz-dot.properties"));
 
-		DotWriter renderer = new DotWriter(p);
+		DotWriter writer = new DotWriter(p);
 		final String content = DotGraphTest.readTestResource("simple.dot").trim();
 		// System.out.println(content);
-		final String image = renderer.toImage("toImage", content);
+		final String image = writer.toImage("toImage", content);
 		assertEquals("toImage.png", image);
 	}
 
