@@ -13,15 +13,24 @@ import org.junit.Test;
 public class DotWriterTest {
 
 	@Test
-	public void render() throws Exception {
+	public void render_with_graphviz() throws Exception {
 		final Properties p = new Properties();
 		p.load(this.getClass().getResourceAsStream("graphviz-dot.properties"));
 
-		DotWriter writer = new DotWriter(p);
+		DotWriter writer = new GraphvizDotWriter(p);
 		final String content = DotGraphTest.readTestResource("simple.dot").trim();
 		// System.out.println(content);
 		final String image = writer.toImage("toImage", content);
 		assertEquals("toImage.png", image);
+	}
+
+	@Test
+	public void render_with_googlechart() throws Exception {
+		DotWriter writer = new GoogleChartDotWriter("target/");
+		final String content = DotGraphTest.readTestResource("simple.dot").trim();
+		// System.out.println(content);
+		final String image = writer.toImage("toGoogleImage", content);
+		assertEquals("toGoogleImage.png", image);
 	}
 
 }
