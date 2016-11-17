@@ -19,6 +19,10 @@
 
 	<developers>
 		<developer>
+			<name>Cyrille Martraire</name>
+			<organizationUrl>https://github.com/cyriux</organizationUrl>
+		</developer>
+		<developer>
 			<name>Benoît Prioux</name>
 			<email>benoit.prioux@gmail.com</email>
 			<organizationUrl>https://github.com/binout</organizationUrl>
