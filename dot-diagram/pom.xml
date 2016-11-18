@@ -1,9 +1,8 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>io.github.livingdocumentation</groupId>
 	<artifactId>dot-diagram</artifactId>
-	<version>1.1-SNAPSHOT</version>
+	<version>1.1</version>
 
 	<name>Dot Diagram</name>
 	<description>A simple Java wrapper on top of Graphviz dot</description>
@@ -38,7 +37,8 @@
 		<connection>scm:git:git://github.com/LivingDocumentation/dot-diagram.git</connection>
 		<developerConnection>scm:git:https://github.com/LivingDocumentation/dot-diagram.git</developerConnection>
 		<url>http://github.com/LivingDocumentation/dot-diagram/tree/master</url>
-	</scm>
+	  <tag>dot-diagram-1.1</tag>
+  </scm>
 
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
