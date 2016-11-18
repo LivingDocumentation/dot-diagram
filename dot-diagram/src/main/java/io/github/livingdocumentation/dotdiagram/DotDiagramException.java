@@ -1,4 +1,4 @@
-package org.livingdocumentation.dotdiagram;
+package io.github.livingdocumentation.dotdiagram;
 
 public class DotDiagramException extends RuntimeException {
 

@@ -1,4 +1,4 @@
-package org.livingdocumentation.dotdiagram;
+package io.github.livingdocumentation.dotdiagram;
 
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;

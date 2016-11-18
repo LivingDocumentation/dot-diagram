@@ -1,4 +1,4 @@
-package org.livingdocumentation.dotdiagram;
+package io.github.livingdocumentation.dotdiagram;
 
 import com.github.kevinsawicki.http.HttpRequest;
 

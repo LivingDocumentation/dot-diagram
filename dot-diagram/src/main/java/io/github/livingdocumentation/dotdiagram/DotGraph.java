@@ -1,11 +1,4 @@
-package org.livingdocumentation.dotdiagram;
-
-import static org.livingdocumentation.dotdiagram.DotRenderer.closeCluster;
-import static org.livingdocumentation.dotdiagram.DotRenderer.cluster;
-import static org.livingdocumentation.dotdiagram.DotRenderer.openCluster;
-import static org.livingdocumentation.dotdiagram.DotRenderer.toLines;
-import static org.livingdocumentation.dotdiagram.DotRenderer.withDotNewLine;
-import static org.livingdocumentation.dotdiagram.DotRenderer.wrapText;
+package io.github.livingdocumentation.dotdiagram;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -292,7 +285,7 @@ public final class DotGraph implements Renderable {
 			}
 			final StringBuffer out = new StringBuffer();
 			if (comment != null) {
-				out.append(withDotNewLine(comment));
+				out.append(DotRenderer.withDotNewLine(comment));
 			}
 
 			final List<String> cells = new ArrayList<String>();
@@ -300,9 +293,9 @@ public final class DotGraph implements Renderable {
 			if (!stereotypes.isEmpty()) {
 				cells.addAll(stereotypes);
 			}
-			final String content = toLines(cells);
+			final String content = DotRenderer.toLines(cells);
 
-			final String wrapText = wrapText(content, 20);
+			final String wrapText = DotRenderer.wrapText(content, 20);
 			out.append(DotRenderer.node(id, wrapText, options));
 
 			Iterator it = associations.iterator();
@@ -381,15 +374,15 @@ public final class DotGraph implements Renderable {
 				cells.add(label);
 			}
 			cells.addAll(stereotypes);
-			final String content = toLines(cells);
+			final String content = DotRenderer.toLines(cells);
 
-			out.append(openCluster(CLUSTER_PREFIX + id));
-			out.append(cluster(content));
+			out.append(DotRenderer.openCluster(CLUSTER_PREFIX + id));
+			out.append(DotRenderer.cluster(content));
 
 			renderNodes(out);
 			renderAssociations(out);
 
-			out.append(closeCluster());
+			out.append(DotRenderer.closeCluster());
 			return out.toString();
 		}
 

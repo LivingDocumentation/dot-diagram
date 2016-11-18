@@ -1,4 +1,4 @@
-package org.livingdocumentation.dotdiagram;
+package io.github.livingdocumentation.dotdiagram;
 
 /**
  * Represents the trait of being renderable into textual format

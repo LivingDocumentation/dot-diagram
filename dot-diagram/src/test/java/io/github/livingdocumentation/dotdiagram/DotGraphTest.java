@@ -1,18 +1,18 @@
-package org.livingdocumentation.dotdiagram;
+package io.github.livingdocumentation.dotdiagram;
 
 import static org.junit.Assert.assertEquals;
-import static org.livingdocumentation.dotdiagram.DotStyles.ASSOCIATION_EDGE_STYLE;
-import static org.livingdocumentation.dotdiagram.DotStyles.INSTANTIATION_EDGE_STYLE;
-import static org.livingdocumentation.dotdiagram.DotStyles.NOTE_EDGE_STYLE;
-import static org.livingdocumentation.dotdiagram.DotStyles.STUB_NODE_OPTIONS;
+import static io.github.livingdocumentation.dotdiagram.DotStyles.ASSOCIATION_EDGE_STYLE;
+import static io.github.livingdocumentation.dotdiagram.DotStyles.INSTANTIATION_EDGE_STYLE;
+import static io.github.livingdocumentation.dotdiagram.DotStyles.NOTE_EDGE_STYLE;
+import static io.github.livingdocumentation.dotdiagram.DotStyles.STUB_NODE_OPTIONS;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 import org.junit.Test;
-import org.livingdocumentation.dotdiagram.DotGraph.Cluster;
-import org.livingdocumentation.dotdiagram.DotGraph.Digraph;
+import io.github.livingdocumentation.dotdiagram.DotGraph.Cluster;
+import io.github.livingdocumentation.dotdiagram.DotGraph.Digraph;
 
 public class DotGraphTest {
 
