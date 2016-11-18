@@ -36,7 +36,7 @@
 
 	<scm>
 		<connection>scm:git:git://github.com/LivingDocumentation/dot-diagram.git</connection>
-		<developerConnection>scm:git:ssh://github.com:LivingDocumentation/dot-diagram.git</developerConnection>
+		<developerConnection>scm:git:https://github.com/LivingDocumentation/dot-diagram.git</developerConnection>
 		<url>http://github.com/LivingDocumentation/dot-diagram/tree/master</url>
 	</scm>
 
