@@ -7,7 +7,7 @@ import java.util.ResourceBundle;
  * The resource bundle for UML styles for Graphviz Dot
  */
 public class DotStyles {
-	private static final String BUNDLE_NAME = "org.livingdocumentation.dotdiagram.dotstyles";
+	private static final String BUNDLE_NAME = "io.github.livingdocumentation.dotdiagram.dotstyles";
 
 	private static final ResourceBundle RESOURCE_BUNDLE = ResourceBundle.getBundle(BUNDLE_NAME);
 
