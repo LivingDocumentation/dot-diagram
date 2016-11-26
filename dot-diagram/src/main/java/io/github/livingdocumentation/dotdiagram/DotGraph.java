@@ -95,7 +95,7 @@ public final class DotGraph implements Renderable {
 
 		protected final Map nodes = new HashMap();
 
-		protected final Collection associations = new HashSet();
+		protected final Collection<Association> associations = new HashSet();
 
 		public AbstractNode(NodeRegistry registry, final String id) {
 			this.registry = registry;
@@ -457,7 +457,7 @@ public final class DotGraph implements Renderable {
 			if (this == other) {
 				return true;
 			}
-			return other.sourceId.equals(sourceId) && other.targetId.equals(targetId);
+			return other.sourceId.equals(sourceId) && other.targetId.equals(targetId) && other.label.equals(label);
 		}
 
 		public int hashCode() {
