@@ -45,5 +45,18 @@ And the clustering example would generate this image:
 
 Please look at the tests for more examples.
 
+# Get it!
+
+From the [Maven Central Repository](https://mvnrepository.com/artifact/io.github.livingdocumentation/dot-diagram)
+
+```
+<!-- https://mvnrepository.com/artifact/io.github.livingdocumentation/dot-diagram -->
+<dependency>
+    <groupId>io.github.livingdocumentation</groupId>
+    <artifactId>dot-diagram</artifactId>
+    <version>1.1</version>
+</dependency>
+```
+
 # See
 http://www.graphviz.org
