@@ -35,6 +35,24 @@ public class DotGraphTest {
 	}
 
 	@Test
+	public void test_double_association() {
+		final String testName = "double";
+		final DotGraph graph = new DotGraph(testName + " test");
+
+		final Digraph digraph = graph.getDigraph();
+		digraph.addNode("Car").setLabel("My Car").setComment("This is BMW").setOptions(STUB_NODE_OPTIONS);
+		digraph.addNode("Wheel").setLabel("Its wheels").setComment("The wheels of my car");
+		digraph.addAssociation("Car", "Wheel").setLabel("4*").setComment("There are 4 wheels").setOptions(ASSOCIATION_EDGE_STYLE);
+		digraph.addAssociation("Car", "Wheel").setLabel("0.1").setComment("Spare Wheel").setOptions(ASSOCIATION_EDGE_STYLE);
+
+		final String actual = graph.render().trim();
+
+		// System.out.println(actual);
+		final String expected = readTestResource(testName + ".dot").trim();
+		assertEquals(expected.trim(), actual);
+	}
+
+	@Test
 	public void test_cluster() {
 		final String testName = "clustering";
 		final DotGraph graph = new DotGraph(testName + " test");
